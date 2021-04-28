@@ -2,6 +2,7 @@
 /**
  * Plugin Name: OpenID Connect Client Button Text Settings Add-on
  * Description: Provides Dashboard settings to manage the login button text for the OpenID Connect Client plugin.
+ * Version: 1.0.0
  *
  * @package  OpenidConnectGeneric_MuPlugin
  *
