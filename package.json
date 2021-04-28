@@ -1,0 +1,63 @@
+{
+	"name": "oidc-generic-button-text-addon",
+	"version": "1.0.0",
+	"description": "WordPress must-use plugin to demo OpenID Connect Generic plugin features and integratation with Keycloak.",
+	"main": "Gruntfile.js",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/oidc-wp/oidc-generic-button-text-addon.git"
+	},
+	"keywords": [
+		"oidc",
+		"sso",
+		"OpenID",
+		"WordPress"
+	],
+	"author": "Tim Nolte <tim.nolte@ndigitals.com>",
+	"license": "GPL-2.0+",
+	"bugs": {
+		"url": "https://github.com/oidc-wp/oidc-generic-button-text-addon/issues"
+	},
+	"homepage": "https://github.com/oidc-wp/oidc-generic-button-text-addon#readme",
+	"engines": {
+		"node": "12.18.3",
+		"npm": "6.14.8"
+	},
+	"devDependencies": {
+		"@floatwork/grunt-po2mo": "^0.3.0",
+		"@ndigitals/grunt-checkrepo": "^0.2.0",
+		"check-node-version": "~4.1.0",
+		"grunt": "1.3.0",
+		"grunt-checkbranch": "^1.0.4",
+		"grunt-checktextdomain": "^1.0.1",
+		"grunt-cli": "1.4.1",
+		"grunt-contrib-clean": "^2.0.0",
+		"grunt-contrib-copy": "^1.0.0",
+		"grunt-gitinfo": "^0.1.9",
+		"grunt-shell": "^2.1.0",
+		"grunt-version": "~2.0.0",
+		"grunt-wp-i18n": "^1.0.3",
+		"grunt-wp-readme-to-markdown": "^2.0.0",
+		"load-grunt-tasks": "^3.5",
+		"node": "^12.21.0",
+		"npm": "6.14.12"
+	},
+	"scripts": {
+		"setup": "npm run setup:npm && npm run setup:composer",
+		"setup:npm": "npm install",
+		"setup:composer": "composer install",
+		"build": "npm run grunt build",
+		"release": "npm run grunt release",
+		"grunt": "node_modules/.bin/grunt",
+		"version": "npm run grunt version",
+		"version:bump": "npm version --no-git-tag-version",
+		"test": "npm run grunt test",
+		"i18n:check": "npm run grunt checktextdomain",
+		"i18n:make": "npm run grunt i18n",
+		"lint": "npm run lint:php",
+		"lint:php": "composer run-script lint",
+		"lint:php:fix": "composer run-script lint-fix",
+		"analyze": "npm run analyze:php",
+		"analyze:php": "composer run-script analyze"
+	}
+}
